@@ -128,10 +128,8 @@ main();
 
 var fallObjects=new Array();function newObject(url,height,width){fallObjects[fallObjects.length]=new Array(url,height,width);}
 
-///////////// EDIT THIS SECTION //////////////
 var numObjs=20, waft=50, fallSpeed=1, wind=0;
 newObject("images/drumpf.png",28,25);
-//////////////////////////////////////////////
 
 function winSize(){
 	winWidth=canvas.width;
@@ -156,15 +154,7 @@ function fall(){
 	var timerId = setTimeout("fall()",10.5);
 }
 function exit( status ) {
-    // http://kevin.vanzonneveld.net
-    // +   original by: Brett Zamir (http://brettz9.blogspot.com)
-    // +      input by: Paul
-    // +   bugfixed by: Hyam Singer (http://www.impact-computing.com/)
-    // +   improved by: Philip Peterson
-    // +   bugfixed by: Brett Zamir (http://brettz9.blogspot.com)
-    // %        note 1: Should be considered expirimental. Please comment on this function.
-    // *     example 1: exit();
-    // *     returns 1: null
+    // copied part from http://kevin.vanzonneveld.net to stop propogation
 
     var i;
 
